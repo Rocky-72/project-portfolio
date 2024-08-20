@@ -78,15 +78,7 @@ body{
     margin-left: 100px;
     text-align: justify;
   }
-  .text-animation{
-    border-right: 1px solid black;
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing steps(5,end)forwards
-    infinite 5s;
-    margin-left: 0;
-  }
+ 
    
   @keyframes typing {
    0% { width: 0; }
@@ -124,6 +116,7 @@ body{
 
  .rectangle-box {
     margin: auto;
+    margin-left: 300px;
     width: 200px;
     height: 350px;
     background-color: #ffffff;
@@ -134,6 +127,7 @@ body{
     left: 42%;
     transform: translate(-50%, -50%);
     box-shadow: -15px 10px 30px rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 
@@ -180,6 +174,7 @@ svg:hover {
     height: 355px;
     box-shadow: #b3150a;
     transition: width 0.5s;
+  
 }
 
 .Skill-page{
@@ -234,3 +229,55 @@ svg:hover {
 }
 
 
+/* Media queries for navigation bar */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin-bottom: 10px;
+  }
+
+  .navbar li a {
+    margin-right: 0;
+  }
+}
+
+/* Media queries for about me section */
+@media screen and (max-width: 1024px) {
+  .aboutme-page {
+    height: auto;
+  }
+
+  .left-body-rectangle,
+  .right-body-rectangle {
+    width: 90%;
+    height: auto;
+    position: static;
+    margin: 20px auto;
+  }
+
+  .right-body-rectangle h1 {
+    margin-top: 20px;
+  }
+
+  .right-body-rectangle p {
+    margin-top: 20px;
+  }
+
+  .cv-button input[type="submit"] {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .right-body-rectangle h1 {
+    font-size: 24px;
+  }
+
+  .right-body-rectangle p {
+    font-size: 16px;
+  }
+}
